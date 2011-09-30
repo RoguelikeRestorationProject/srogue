@@ -1,0 +1,48 @@
+EXTTHG player;
+EXTWEP weaps[];
+EXTARM armors[];
+EXTMON monsters[], *mtlev[];
+EXTTRAP *trap_at(), traps[];
+EXTROOM *roomin(), *oldrp, rooms[];
+EXTCORD *rndmove(), *rnd_pos(), delta, stairs, oldpos, rndspot;
+EXTLKL *mlist, *lvl_obj, *new_item(), *new_thing(), *new_monster();
+EXTLKL *find_mons(), *wake_monster(), *find_obj(), *get_item();
+EXTOBJ *cur_armor, *cur_weapon, *cur_ring[];
+EXTMAG r_magic[], s_magic[], ws_magic[], p_magic[];
+EXTMAG things[], a_magic[], w_magic[];
+EXTINT max_hp, quiet, food_left, hungry_state, level, max_level;
+EXTINT foodlev, total, count, demoncnt, fung_hit, ntraps;
+EXTINT lastscore, purse, mpos, seed, dnum, no_food, packvol, playuid;
+EXTINT curprice, trader, group, levcount, levtype, ringfood, playgid;
+EXTINT chkstairs(), rollwand(), swander(), notslow(), notfight(), rnd();
+EXTINT rchg_str(), wghtchk(), stomach(), doctor(), runners(), status(), sight();
+extern void quit(), auto_save(), endit(), byebye(), game_err();
+EXTINT prntfile(), unconfuse(), sapem();
+EXTINT noteth(), notregen(), notinvinc(), unsee(), nohaste(), npch();
+EXTBOOL running, nochange, after, inwhgt, isfight, firstmove, nlmove;
+EXTBOOL wizard, waswizard, in_shell, amulet, door_stop, playing;
+EXTBOOL notify, ws_know[], p_know[], s_know[], r_know[], inpool;
+EXTCHAR home[], file_name[], whoami[], fruit[], curpurch[], scorefile[];
+EXTCHAR *r_stones[], *p_colors[], *s_names[], *ws_type[], *ws_made[];
+EXTCHAR *ws_guess[], *s_guess[], *r_guess[], *p_guess[];/*, *unctrl();*/
+EXTCHAR morestr[], prbuf[], huh[], *identify(), *vowelstr();
+EXTCHAR *new(), *strcpy(), *strcat(), *inv_name(), pack_char(), *prname();
+EXTCHAR *num(), *getenv(), *tr_name(), *release, take, runch;
+EXTCHAR retstr[], wizstr[], spacemsg[], illegal[], callit[], starlist[];
+EXTSTAT max_stats, *him;
+extern struct magic_info thnginfo[];
+extern struct real re_stats;
+extern long e_levels[];
+extern struct rod ws_stuff[];
+extern struct sgttyb _tty;
+
+extern struct coord nh;
+extern struct delayed_action d_list[MAXDAEMONS];
+extern int between;
+
+extern char *rainbow[NCOLORS];
+extern char *sylls[NSYLS];
+extern char *stones[NSTONES];
+extern char *wood[NWOOD];
+extern char *metal[NMETAL];
+
